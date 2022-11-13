@@ -103,22 +103,22 @@ def playfair(message, key, decrypt_mode=True):
     return encrypt(message, key)
 
 
-# In[21]:
+# In[22]:
 
 
 # Generate playfair key using keyword 'CRYPTOGRAPHY'
 key = generate_key('VLADISLAVARTUROVICH')
-print("Key: \n", key)
+print("Ключ: \n", key)
 
 # Define the message to encrypt using this algorithm
 message = 'BAIDIN' 
-print("Message: \n", message)
+print("Текст для шифра: \n", message)
 
 # Cipher the message using the playfair algorithm
 ciphertext = playfair(message, key, decrypt_mode=False)
-print("Cipher text: \n", ciphertext)
+print("Шифрованный текст: \n", ciphertext)
 
 # Recover the original message using the playfair algorithm (undebugged message)
 recovered_message = playfair(ciphertext, key, decrypt_mode=True)
-print("Recovered message (undebugged): \n", recovered_message)
+print("Дешефрованный текст: \n", recovered_message)
 
